@@ -19,7 +19,8 @@ defmodule HeadsUpWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
-    get "tips", TipController, :index
+    get "/tips", TipController, :index
+    get "/tips/:id", TipController, :show
   end
 
   def snoop(conn, _opts) do
